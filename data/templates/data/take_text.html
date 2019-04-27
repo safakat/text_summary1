@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% load static%}
+		<title>Take Text</title>
+		<script type="text/javascript" src="{% static 'data/js/script0.js' %}"></script>
+		<link rel="stylesheet" type="text/css" href="{% static 'data/css/style0.css' %}">
+
+		
+	</head>
+	<body>
+
+		<!-- <form action="{% url 'text0' %}" method="post">
+			{% csrf_token %}
+		<input type="text" name="url0" placeholder="enter the url here"><br>
+		<input type="file" name="file0" placeholder="upload your txt file"><br>
+		<button type="submit" >SUBMIT</button>
+	</form> -->
+
+<button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" >Text From url</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Text from file</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+<div id="Home" class="tabcontent">
+  <!-- <h3>Home</h3>
+  <p>Home is where the heart is..</p> -->
+
+
+  </form>
+
+</div>
+
+<div id="News" class="tabcontent">
+  <form action="{% url 'text0' %}" method="post">
+  	{% csrf_token %}
+  	<input type="text" name="url0" placeholder="enter the url here"><br>
+  	<button type="submit" >SUBMIT</button>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+
+	</body>
+</html>
